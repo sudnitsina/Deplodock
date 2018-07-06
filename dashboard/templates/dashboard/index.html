@@ -1,0 +1,65 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Deplodock - dashboard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+  <script  src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script  src={% static 'js/jqueryui.js' %}></script>
+  <script  src={% static 'js/script.js' %}></script>
+  <link rel='stylesheet' href={% static 'css/style.css' %}>
+</head>
+<body class="w3-light-grey">
+  <div id="modal" class="w3-modal">
+    <div class="w3-modal-content w3-card-8">
+      <div class="w3-container" id="modal_content"></div>
+    </div>
+  </div>
+  <div id = "eb" class="w3-white w3-text-grey w3-bar">
+    <a href="/accounts/profile/" class="w3-bar-item w3-button w3-white">
+      <i class="fa fa-home"></i>
+    </a>
+    <div class="w3-bar-item">
+      <a href="javascript:void(0)" onclick="mach()" class="w3-bar-item label h">Machines</a>
+    </div>
+    <div class="w3-bar-item">
+      <div class="ui-widget"><span class="label">Inventories</span>
+        <select id="combobox"></select>
+        <button id="delInv" class="w3-disabled">DEL</button>
+        <button id="addInv">ADD</button>
+      </div>
+    </div>
+    <div id="inventoryform" class="w3-bar-item" ></div>
+    <div class="w3-bar-item" id="sidepanel">
+      <div id ="gr" class="ui-widget"><span class="label">Groups</span>
+        <select id="combobox2"></select>
+        <button id="delGr" class="w3-disabled">DEL</button>
+        <button id="addGr">ADD</button></div>
+      </div>
+      <div id="groupform" class="w3-bar-item"></div>
+    </div>
+    <div class="w3-container w3-card-2 w3-white column" id="col1">
+      <h2 class="w3-text-grey">Vars </h2> <nobr>
+      <div id="vars"></div>
+    </div>
+    <div id="dragbar" class ="dragbar"></div>
+    <div class="w3-container w3-card-2 w3-white column" id="col2">
+      <h2 class="w3-text-grey">Hosts</h2>
+      <div id="hosts"></div>
+    </div>
+    <div id="dragbar2" class = "dragbar"></div>
+    <div class="w3-container w3-card-2 w3-white column" id="col3">
+      <h2 class="w3-text-grey">Groups </h2>
+      <div id="groups"></div>
+    </div>
+  </body>
+</html>
+<script type="text/javascript">
+  var csrf_token = '{{ csrf_token }}';
+</script>

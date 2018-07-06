@@ -1,0 +1,10 @@
+<table>
+
+  {% for m in machines %}
+  <tr>
+    <td> {{ m }} </td>
+    <td><button class='minus' onclick="del('/api/machines/{{ m }}')">-</button></td>
+  </tr>
+  {% endfor %}
+
+</table>

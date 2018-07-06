@@ -1,0 +1,28 @@
+{% extends 'dashboard/base.html' %}
+{% block content %}
+
+<form method="POST" class="token">{% csrf_token %}<br>
+	<h2>
+		ADMIN TOKEN
+	</h2>
+	<span> Это административный токен имееющий доступ ко всем инветориям, а также к управлению списком машин и импорту инвентория.</span><br>
+	<input type="text" class="token-field" value="{{token}}" readonly></input>
+	<button class="w3-btn w3-round">Get token</button>
+	{% if token %}
+	<a href={% url 'token_delete' token %} class="w3-btn w3-round w3-padding" >Delete token</a>
+	{% endif %}
+</form>
+<div class="token">
+	<h2>
+		SCOPED TOKENS
+	</h2>
+	{% for i in list %}
+	<h4>{{ i.description }}</h4>
+	<input type="text" class="token-field" value="{{ i.token }}" readonly></input>
+	<a href={% url 'scoped_edit' i.token %} class="w3-btn w3-round w3-padding">Edit token</a>
+	<a href={% url 'scoped_delete' i.token %} class="w3-btn w3-round w3-padding">Delete token</a>
+	{% endfor %}
+	<br><br><br>
+	<a href={% url 'scoped' %} class="w3-btn w3-round w3-padding" >Добавить новый токен</a>
+</div>
+{% endblock %}

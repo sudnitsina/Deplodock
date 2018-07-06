@@ -1,0 +1,248 @@
+
+html,body,h1,h2,h3,h4,h5,h6 {
+  font-family: "Roboto", sans-serif
+}
+
+.h, h2 {
+  font-size: 22px;
+}
+
+a {
+  font-size: 15px;
+}
+
+/* ---------------- Header---------------- */
+
+a.w3-bar-item {
+  text-decoration: none;
+}
+
+a.label, span.label {
+  font-size: 22px;
+  vertical-align: sub
+}
+
+a.label{
+  line-height: 27px
+}
+
+#eb {
+  left: 0.5%;
+  overflow: none;
+  position: absolute;
+  top: 0;
+  width: 99%;
+}
+
+.w3-bar-item{
+  display:inline;
+  padding:4px 6px !important;
+}
+
+/* ---------------- Combobox---------------- */
+
+.custom-combobox {
+  display: inline-block;
+  position: relative;
+}
+.custom-combobox-toggle {
+  bottom: 0;
+  margin-left: -1px;
+  padding: 0;
+  position: absolute;
+  top: 0;
+}
+.custom-combobox-input {
+  margin: 0;
+  padding: 5px 10px;
+}
+
+/* ----------------Buttons---------------- */
+
+button, .minus {
+  background-color:#646464;
+  border-radius:25%;
+  border: none;
+  color:#fff;
+  cursor:pointer;
+  font-size:16px;
+  text-align:center;
+}
+
+.minus {
+  float: right;
+  font-size:18px;
+  height: 26px;
+  text-decoration: none;
+  width: 26px;
+}
+
+button.plus {
+  float: right;
+  position: relative;
+  width: 26px;
+}
+#modal_content .plus {
+  float: none;
+  position: static;
+}
+#sidepanel .plus {
+  left: -5px;
+  top: 3px;
+}
+
+#vars.plus, #hosts.plus, #groups.plus {
+  left: -2px;
+}
+
+.group {
+  padding: 5px;
+}
+
+.right {
+  float: right;
+}
+
+#host_vars {
+  padding: 50px;
+}
+
+table {
+  border-collapse:collapse;
+  margin:5% 0;
+  width:100%;
+}
+
+table tr:hover {
+  background-color: #f1f1f1;
+}
+
+table td:first-child {
+  padding-left: 16px;
+}
+
+table td {
+  padding: 4px 2px;
+}
+
+#addInv, #addGr {
+  height: 34px;
+  margin-left: 2px;
+}
+
+#delInv, #delGr {
+  background-color: #ff5233;
+  height: 34px;
+  margin-left: 35px;
+}
+
+#modal_content {
+  padding-top: 20px;
+}
+
+button[type="submit"] {
+  height: 34px;
+  margin: 10px;
+  padding: 1px 10px;
+}
+
+.ui-autocomplete {
+  max-height: 200px;
+  overflow-y: auto;
+  /* prevent horizontal scrollbar */
+  overflow-x: hidden;
+}
+.ui-widget {
+  font-family: "Roboto", sans-serif !important;
+  white-space: nowrap;
+}
+
+.w3-button>i {
+  color: #4d4d4d;
+  font-size: 29px;
+}
+.column {
+  width: 32.6%;
+}
+
+#col1, #col2, #col3 {
+  position: absolute;
+  overflow: auto;
+}
+
+#col1 {
+  left: 0.5%;
+}
+
+#col2 {
+  left: 33.7%;
+}
+
+#col3 {
+  right: 0.5%;
+}
+
+.close {
+  color: #929292;
+  font-size: 40px;
+  position: relative;
+  right: -10px;
+  text-decoration: none;
+  top: -30px;
+}
+
+input {
+  width: 100%;
+}
+
+#inventoryform input, #groupform input {
+  height: 34px;
+  width: 200px;
+}
+
+input[placeholder="Name"], input[placeholder="Value"] {
+  height: 34px;
+  width: 42.3%;
+}
+
+form.w3-animate-left>button {
+  height: 34px;
+  margin: 0 0 0 10px;
+}
+
+/* ----------------Dragbars---------------- */
+
+.dragbar {
+  background-color: #f1f1f1;
+  cursor: e-resize;
+  height: 94%;
+  left: 33.2%;
+  position: absolute;
+  top: 8%;
+  z-index:1;
+}
+
+#dragbar {
+  left: 33.2%;
+}
+
+#dragbar2 {
+  left: 66.4%;
+}
+
+@media (max-width: 1200px) {
+  .w3-bar-item, #sidepanel {
+    text-align: right;
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .ui-widget {
+    white-space: normal;
+  }
+  .label {
+    display: block;
+    width: 100%;
+  }
+}

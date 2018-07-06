@@ -1,0 +1,11 @@
+{% extends 'dashboard/base.html' %}
+{% block content %}
+
+Выберите, в какие инвентари предоставить доступ новому токену.
+
+<form method="POST" id="scoped-token">{% csrf_token %}
+  {{ form.as_p }}
+  <input class="w3-btn w3-right" type="submit" value="Создать токен">
+</form>
+
+{% endblock %}

@@ -1,0 +1,104 @@
+/*------------------base.html-------------------------*/
+
+input {
+  border-radius:4px;
+  border:0.5px solid grey!important;
+  display:block;
+  margin: 0;
+  padding: 8px;
+  width:100%;
+}
+
+.w3-top {
+  z-index: 1031
+}
+
+body,h1,h2,h3,h4,h5,h6 {
+  font-family: "Open Sans", sans-serif
+}
+
+.w3-bar .w3-button {
+  font-size: 15px;
+  line-height: 20px;
+  padding: 16px;
+}
+
+.w3-row {
+  margin-left:12% !important;
+}
+
+.fa {
+  color: grey
+}
+
+input[type="text"],[type="password"] {
+  width: 100%;
+}
+
+tr {
+  text-align: left;
+}
+
+.helptext {
+  display: none
+}
+
+ul {
+  list-style: none;
+  padding: 0
+}
+
+.w3-table br {
+  display:none;
+}
+.errorlist {
+  color: red;
+  margin-top: 0;
+  font-size: 13px;
+}
+
+/*------------------login------------------------*/
+
+table.login {width: 100%}
+.login tr {vertical-align: top; }
+.login th, td {padding: 10px}
+
+/*------------------token------------------------*/
+
+.w3-btn {
+	background-color: #333;
+	height: 37px;
+	margin: 1px;
+}
+
+.token-field {
+ float: left;
+ margin-right: 3px;
+ width: 50% !important;
+}
+
+input[type="checkbox"] {
+  float: left;
+  height: 20px;
+  width: 10%;
+}
+
+#scoped-token {
+  margin: 100px;
+}
+
+#scoped-token tr {
+  vertical-align: top;
+}
+
+#scoped-token ul {
+  padding: 1px
+}
+
+#scoped-token li {
+  width: 50%;
+}
+
+.token {
+  margin: 100px;
+}
